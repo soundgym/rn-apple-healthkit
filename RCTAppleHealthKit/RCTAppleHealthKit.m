@@ -236,6 +236,11 @@ RCT_EXPORT_METHOD(getCalciumSamples:(NSDictionary *)input callback:(RCTResponseS
     [self dietary_getCalciumSamples:input callback:callback];
 }
 
+RCT_EXPORT_METHOD(getProteinSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self dietary_getProteinSamples:input callback:callback];
+}
+
 RCT_EXPORT_METHOD(getSugarSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self dietary_getSugarSamples:input callback:callback];

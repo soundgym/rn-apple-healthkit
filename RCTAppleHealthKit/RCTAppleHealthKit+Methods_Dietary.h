@@ -20,6 +20,7 @@
 - (void)dietary_getFolateSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)dietary_getIronSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)dietary_getPotassiumSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
+- (void)dietary_getProteinSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)dietary_getFatSaturatedSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)dietary_getSodiumSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)dietary_getVitaminASamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

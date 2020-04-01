@@ -474,6 +474,14 @@
                 callback: callback];
 }
 
+- (void)dietary_getProteinSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+{
+    [self getTypeSamples: input
+          typeIdentifier: HKQuantityTypeIdentifierDietaryProtein
+            errorMessage: @"error getting dietary protein samples:"
+                callback: callback];
+}
+
 - (void)dietary_getFatSaturatedSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
     [self getTypeSamples: input
