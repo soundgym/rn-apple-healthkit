@@ -1,67 +1,67 @@
-declare const _default: {
-    ActiveEnergyBurned: string;
-    AppleExerciseTime: string;
-    BasalEnergyBurned: string;
-    BiologicalSex: string;
-    BloodGlucose: string;
-    BloodPressureDiastolic: string;
-    BloodPressureSystolic: string;
-    BodyFatPercentage: string;
-    BodyMass: string;
-    BodyMassIndex: string;
-    BodyTemperature: string;
-    DateOfBirth: string;
-    Biotin: string;
-    Caffeine: string;
-    Calcium: string;
-    Carbohydrates: string;
-    Chloride: string;
-    Cholesterol: string;
-    Copper: string;
-    EnergyConsumed: string;
-    FatMonounsaturated: string;
-    FatPolyunsaturated: string;
-    FatSaturated: string;
-    FatTotal: string;
-    Fiber: string;
-    Folate: string;
-    Iodine: string;
-    Iron: string;
-    Magnesium: string;
-    Manganese: string;
-    Molybdenum: string;
-    Niacin: string;
-    PantothenicAcid: string;
-    Phosphorus: string;
-    Potassium: string;
-    Protein: string;
-    Riboflavin: string;
-    Selenium: string;
-    Sodium: string;
-    Sugar: string;
-    Thiamin: string;
-    VitaminA: string;
-    VitaminB12: string;
-    VitaminB6: string;
-    VitaminC: string;
-    VitaminD: string;
-    VitaminE: string;
-    VitaminK: string;
-    Zinc: string;
-    Water: string;
-    DistanceCycling: string;
-    DistanceWalkingRunning: string;
-    FlightsClimbed: string;
-    HeartRate: string;
-    Height: string;
-    LeanBodyMass: string;
-    MindfulSession: string;
-    NikeFuel: string;
-    RespiratoryRate: string;
-    SleepAnalysis: string;
-    StepCount: string;
-    Steps: string;
-    Weight: string;
-    Workout: string;
-};
-export default _default;
+declare enum Permissions {
+    ActiveEnergyBurned = "ActiveEnergyBurned",
+    AppleExerciseTime = "AppleExerciseTime",
+    BasalEnergyBurned = "BasalEnergyBurned",
+    BiologicalSex = "BiologicalSex",
+    BloodGlucose = "BloodGlucose",
+    BloodPressureDiastolic = "BloodPressureDiastolic",
+    BloodPressureSystolic = "BloodPressureSystolic",
+    BodyFatPercentage = "BodyFatPercentage",
+    BodyMass = "BodyMass",
+    BodyMassIndex = "BodyMassIndex",
+    BodyTemperature = "BodyTemperature",
+    DateOfBirth = "DateOfBirth",
+    Biotin = "Biotin",
+    Caffeine = "Caffeine",
+    Calcium = "Calcium",
+    Carbohydrates = "Carbohydrates",
+    Chloride = "Chloride",
+    Cholesterol = "Cholesterol",
+    Copper = "Copper",
+    EnergyConsumed = "EnergyConsumed",
+    FatMonounsaturated = "FatMonounsaturated",
+    FatPolyunsaturated = "FatPolyunsaturated",
+    FatSaturated = "FatSaturated",
+    FatTotal = "FatTotal",
+    Fiber = "Fiber",
+    Folate = "Folate",
+    Iodine = "Iodine",
+    Iron = "Iron",
+    Magnesium = "Magnesium",
+    Manganese = "Manganese",
+    Molybdenum = "Molybdenum",
+    Niacin = "Niacin",
+    PantothenicAcid = "PantothenicAcid",
+    Phosphorus = "Phosphorus",
+    Potassium = "Potassium",
+    Protein = "Protein",
+    Riboflavin = "Riboflavin",
+    Selenium = "Selenium",
+    Sodium = "Sodium",
+    Sugar = "Sugar",
+    Thiamin = "Thiamin",
+    VitaminA = "VitaminA",
+    VitaminB12 = "VitaminB12",
+    VitaminB6 = "VitaminB6",
+    VitaminC = "VitaminC",
+    VitaminD = "VitaminD",
+    VitaminE = "VitaminE",
+    VitaminK = "VitaminK",
+    Zinc = "Zinc",
+    Water = "Water",
+    DistanceCycling = "DistanceCycling",
+    DistanceWalkingRunning = "DistanceWalkingRunning",
+    FlightsClimbed = "FlightsClimbed",
+    HeartRate = "HeartRate",
+    Height = "Height",
+    LeanBodyMass = "LeanBodyMass",
+    MindfulSession = "MindfulSession",
+    NikeFuel = "NikeFuel",
+    RespiratoryRate = "RespiratoryRate",
+    SleepAnalysis = "SleepAnalysis",
+    StepCount = "StepCount",
+    Steps = "Steps",
+    Weight = "Weight",
+    Workout = "Workout"
+}
+export default Permissions;

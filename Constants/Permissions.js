@@ -1,69 +1,71 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    ActiveEnergyBurned: "ActiveEnergyBurned",
-    AppleExerciseTime: "AppleExerciseTime",
-    BasalEnergyBurned: "BasalEnergyBurned",
-    BiologicalSex: "BiologicalSex",
-    BloodGlucose: "BloodGlucose",
-    BloodPressureDiastolic: "BloodPressureDiastolic",
-    BloodPressureSystolic: "BloodPressureSystolic",
-    BodyFatPercentage: "BodyFatPercentage",
-    BodyMass: "BodyMass",
-    BodyMassIndex: "BodyMassIndex",
-    BodyTemperature: "BodyTemperature",
-    DateOfBirth: "DateOfBirth",
-    Biotin: "Biotin",
-    Caffeine: "Caffeine",
-    Calcium: "Calcium",
-    Carbohydrates: "Carbohydrates",
-    Chloride: "Chloride",
-    Cholesterol: "Cholesterol",
-    Copper: "Copper",
-    EnergyConsumed: "EnergyConsumed",
-    FatMonounsaturated: "FatMonounsaturated",
-    FatPolyunsaturated: "FatPolyunsaturated",
-    FatSaturated: "FatSaturated",
-    FatTotal: "FatTotal",
-    Fiber: "Fiber",
-    Folate: "Folate",
-    Iodine: "Iodine",
-    Iron: "Iron",
-    Magnesium: "Magnesium",
-    Manganese: "Manganese",
-    Molybdenum: "Molybdenum",
-    Niacin: "Niacin",
-    PantothenicAcid: "PantothenicAcid",
-    Phosphorus: "Phosphorus",
-    Potassium: "Potassium",
-    Protein: "Protein",
-    Riboflavin: "Riboflavin",
-    Selenium: "Selenium",
-    Sodium: "Sodium",
-    Sugar: "Sugar",
-    Thiamin: "Thiamin",
-    VitaminA: "VitaminA",
-    VitaminB12: "VitaminB12",
-    VitaminB6: "VitaminB6",
-    VitaminC: "VitaminC",
-    VitaminD: "VitaminD",
-    VitaminE: "VitaminE",
-    VitaminK: "VitaminK",
-    Zinc: "Zinc",
-    Water: "Water",
-    DistanceCycling: "DistanceCycling",
-    DistanceWalkingRunning: "DistanceWalkingRunning",
-    FlightsClimbed: "FlightsClimbed",
-    HeartRate: "HeartRate",
-    Height: "Height",
-    LeanBodyMass: "LeanBodyMass",
-    MindfulSession: "MindfulSession",
-    NikeFuel: "NikeFuel",
-    RespiratoryRate: "RespiratoryRate",
-    SleepAnalysis: "SleepAnalysis",
-    StepCount: "StepCount",
-    Steps: "Steps",
-    Weight: "Weight",
-    Workout: "Workout",
-};
+var Permissions;
+(function (Permissions) {
+    Permissions["ActiveEnergyBurned"] = "ActiveEnergyBurned";
+    Permissions["AppleExerciseTime"] = "AppleExerciseTime";
+    Permissions["BasalEnergyBurned"] = "BasalEnergyBurned";
+    Permissions["BiologicalSex"] = "BiologicalSex";
+    Permissions["BloodGlucose"] = "BloodGlucose";
+    Permissions["BloodPressureDiastolic"] = "BloodPressureDiastolic";
+    Permissions["BloodPressureSystolic"] = "BloodPressureSystolic";
+    Permissions["BodyFatPercentage"] = "BodyFatPercentage";
+    Permissions["BodyMass"] = "BodyMass";
+    Permissions["BodyMassIndex"] = "BodyMassIndex";
+    Permissions["BodyTemperature"] = "BodyTemperature";
+    Permissions["DateOfBirth"] = "DateOfBirth";
+    Permissions["Biotin"] = "Biotin";
+    Permissions["Caffeine"] = "Caffeine";
+    Permissions["Calcium"] = "Calcium";
+    Permissions["Carbohydrates"] = "Carbohydrates";
+    Permissions["Chloride"] = "Chloride";
+    Permissions["Cholesterol"] = "Cholesterol";
+    Permissions["Copper"] = "Copper";
+    Permissions["EnergyConsumed"] = "EnergyConsumed";
+    Permissions["FatMonounsaturated"] = "FatMonounsaturated";
+    Permissions["FatPolyunsaturated"] = "FatPolyunsaturated";
+    Permissions["FatSaturated"] = "FatSaturated";
+    Permissions["FatTotal"] = "FatTotal";
+    Permissions["Fiber"] = "Fiber";
+    Permissions["Folate"] = "Folate";
+    Permissions["Iodine"] = "Iodine";
+    Permissions["Iron"] = "Iron";
+    Permissions["Magnesium"] = "Magnesium";
+    Permissions["Manganese"] = "Manganese";
+    Permissions["Molybdenum"] = "Molybdenum";
+    Permissions["Niacin"] = "Niacin";
+    Permissions["PantothenicAcid"] = "PantothenicAcid";
+    Permissions["Phosphorus"] = "Phosphorus";
+    Permissions["Potassium"] = "Potassium";
+    Permissions["Protein"] = "Protein";
+    Permissions["Riboflavin"] = "Riboflavin";
+    Permissions["Selenium"] = "Selenium";
+    Permissions["Sodium"] = "Sodium";
+    Permissions["Sugar"] = "Sugar";
+    Permissions["Thiamin"] = "Thiamin";
+    Permissions["VitaminA"] = "VitaminA";
+    Permissions["VitaminB12"] = "VitaminB12";
+    Permissions["VitaminB6"] = "VitaminB6";
+    Permissions["VitaminC"] = "VitaminC";
+    Permissions["VitaminD"] = "VitaminD";
+    Permissions["VitaminE"] = "VitaminE";
+    Permissions["VitaminK"] = "VitaminK";
+    Permissions["Zinc"] = "Zinc";
+    Permissions["Water"] = "Water";
+    Permissions["DistanceCycling"] = "DistanceCycling";
+    Permissions["DistanceWalkingRunning"] = "DistanceWalkingRunning";
+    Permissions["FlightsClimbed"] = "FlightsClimbed";
+    Permissions["HeartRate"] = "HeartRate";
+    Permissions["Height"] = "Height";
+    Permissions["LeanBodyMass"] = "LeanBodyMass";
+    Permissions["MindfulSession"] = "MindfulSession";
+    Permissions["NikeFuel"] = "NikeFuel";
+    Permissions["RespiratoryRate"] = "RespiratoryRate";
+    Permissions["SleepAnalysis"] = "SleepAnalysis";
+    Permissions["StepCount"] = "StepCount";
+    Permissions["Steps"] = "Steps";
+    Permissions["Weight"] = "Weight";
+    Permissions["Workout"] = "Workout";
+})(Permissions || (Permissions = {}));
+exports.default = Permissions;
 //# sourceMappingURL=Permissions.js.map

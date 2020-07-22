@@ -1,23 +1,23 @@
-declare const _default: {
-    bpm: string;
-    calorie: string;
-    celsius: string;
-    count: string;
-    day: string;
-    fahrenheit: string;
-    foot: string;
-    gram: string;
-    hour: string;
-    inch: string;
-    joule: string;
-    meter: string;
-    mgPerdL: string;
-    mile: string;
-    minute: string;
-    mmhg: string;
-    mmolPerL: string;
-    percent: string;
-    pound: string;
-    second: string;
-};
-export default _default;
+declare enum Units {
+    bpm = "bpm",
+    calorie = "calorie",
+    celsius = "celsius",
+    count = "count",
+    day = "day",
+    fahrenheit = "fahrenheit",
+    foot = "foot",
+    gram = "gram",
+    hour = "hour",
+    inch = "inch",
+    joule = "joule",
+    meter = "meter",
+    mgPerdL = "mgPerdL",
+    mile = "mile",
+    minute = "minute",
+    mmhg = "mmhg",
+    mmolPerL = "mmolPerL",
+    percent = "percent",
+    pound = "pound",
+    second = "second"
+}
+export default Units;

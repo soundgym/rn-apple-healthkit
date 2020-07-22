@@ -5,6 +5,7 @@ const Constants_1 = require("./Constants");
 const react_native_1 = require("react-native");
 var AuthorizationStatus;
 (function (AuthorizationStatus) {
+    AuthorizationStatus[AuthorizationStatus["UnavailablePermission"] = -1] = "UnavailablePermission";
     AuthorizationStatus[AuthorizationStatus["NotDetermined"] = 0] = "NotDetermined";
     AuthorizationStatus[AuthorizationStatus["SharingDenied"] = 1] = "SharingDenied";
     AuthorizationStatus[AuthorizationStatus["SharingAuthorized"] = 2] = "SharingAuthorized";
@@ -42,6 +43,9 @@ const HealthKit = {
                 ...rest,
             }, handleCallbackWithPromise(resolve, reject));
         });
+    },
+    authorizationStatus: (types) => {
+        return AppleHealthKit.authorizationStatus(types);
     },
     getAuthStatus: (options) => {
         return new Promise((resolve, reject) => {

@@ -1,77 +1,79 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    AmericanFootball: "AmericanFootball",
-    Archery: "Archery",
-    AustralianFootball: "AustralianFootball",
-    Badminton: "Badminton",
-    Baseball: "Baseball",
-    Basketball: "Basketball",
-    Bowling: "Bowling",
-    Boxing: "Boxing",
-    Climbing: "Climbing",
-    Cricket: "Cricket",
-    CrossTraining: "CrossTraining",
-    Curling: "Curling",
-    Cycling: "Cycling",
-    Dance: "Dance",
-    Elliptical: "Elliptical",
-    EquestrianSports: "EquestrianSports",
-    Fencing: "Fencing",
-    Fishing: "Fishing",
-    FunctionalStrengthTraining: "FunctionalStrengthTraining",
-    Golf: "Golf",
-    Gymnastics: "Gymnastics",
-    Handball: "Handball",
-    Hiking: "Hiking",
-    Hockey: "Hockey",
-    Hunting: "Hunting",
-    Lacrosse: "Lacrosse",
-    MartialArts: "MartialArts",
-    MindAndBody: "MindAndBody",
-    PaddleSports: "PaddleSports",
-    Play: "Play",
-    PreparationAndRecovery: "PreparationAndRecovery",
-    Racquetball: "Racquetball",
-    Rowing: "Rowing",
-    Rugby: "Rugby",
-    Running: "Running",
-    Sailing: "Sailing",
-    SkatingSports: "SkatingSports",
-    SnowSports: "SnowSports",
-    Soccer: "Soccer",
-    Softball: "Softball",
-    Squash: "Squash",
-    StairClimbing: "StairClimbing",
-    SurfingSports: "SurfingSports",
-    Swimming: "Swimming",
-    TableTennis: "TableTennis",
-    Tennis: "Tennis",
-    TrackAndField: "TrackAndField",
-    TraditionalStrengthTraining: "TraditionalStrengthTraining",
-    Volleyball: "Volleyball",
-    Walking: "Walking",
-    WaterFitness: "WaterFitness",
-    WaterPolo: "WaterPolo",
-    WaterSports: "WaterSports",
-    Wrestling: "Wrestling",
-    Yoga: "Yoga",
-    Barre: "Barre",
-    CoreTraining: "CoreTraining",
-    CrossCountrySkiing: "CrossCountrySkiing",
-    DownhillSkiing: "DownhillSkiing",
-    Flexibility: "Flexibility",
-    HighIntensityIntervalTraining: "HighIntensityIntervalTraining",
-    JumpRope: "JumpRope",
-    Kickboxing: "Kickboxing",
-    Pilates: "Pilates",
-    Snowboarding: "Snowboarding",
-    Stairs: "Stairs",
-    StepTraining: "StepTraining",
-    WheelchairWalkPace: "WheelchairWalkPace",
-    WheelchairRunPace: "WheelchairRunPace",
-    TaiChi: "TaiChi",
-    MixedCardio: "MixedCardio",
-    HandCycling: "HandCycling",
-};
+var Activities;
+(function (Activities) {
+    Activities["AmericanFootball"] = "AmericanFootball";
+    Activities["Archery"] = "Archery";
+    Activities["AustralianFootball"] = "AustralianFootball";
+    Activities["Badminton"] = "Badminton";
+    Activities["Baseball"] = "Baseball";
+    Activities["Basketball"] = "Basketball";
+    Activities["Bowling"] = "Bowling";
+    Activities["Boxing"] = "Boxing";
+    Activities["Climbing"] = "Climbing";
+    Activities["Cricket"] = "Cricket";
+    Activities["CrossTraining"] = "CrossTraining";
+    Activities["Curling"] = "Curling";
+    Activities["Cycling"] = "Cycling";
+    Activities["Dance"] = "Dance";
+    Activities["Elliptical"] = "Elliptical";
+    Activities["EquestrianSports"] = "EquestrianSports";
+    Activities["Fencing"] = "Fencing";
+    Activities["Fishing"] = "Fishing";
+    Activities["FunctionalStrengthTraining"] = "FunctionalStrengthTraining";
+    Activities["Golf"] = "Golf";
+    Activities["Gymnastics"] = "Gymnastics";
+    Activities["Handball"] = "Handball";
+    Activities["Hiking"] = "Hiking";
+    Activities["Hockey"] = "Hockey";
+    Activities["Hunting"] = "Hunting";
+    Activities["Lacrosse"] = "Lacrosse";
+    Activities["MartialArts"] = "MartialArts";
+    Activities["MindAndBody"] = "MindAndBody";
+    Activities["PaddleSports"] = "PaddleSports";
+    Activities["Play"] = "Play";
+    Activities["PreparationAndRecovery"] = "PreparationAndRecovery";
+    Activities["Racquetball"] = "Racquetball";
+    Activities["Rowing"] = "Rowing";
+    Activities["Rugby"] = "Rugby";
+    Activities["Running"] = "Running";
+    Activities["Sailing"] = "Sailing";
+    Activities["SkatingSports"] = "SkatingSports";
+    Activities["SnowSports"] = "SnowSports";
+    Activities["Soccer"] = "Soccer";
+    Activities["Softball"] = "Softball";
+    Activities["Squash"] = "Squash";
+    Activities["StairClimbing"] = "StairClimbing";
+    Activities["SurfingSports"] = "SurfingSports";
+    Activities["Swimming"] = "Swimming";
+    Activities["TableTennis"] = "TableTennis";
+    Activities["Tennis"] = "Tennis";
+    Activities["TrackAndField"] = "TrackAndField";
+    Activities["TraditionalStrengthTraining"] = "TraditionalStrengthTraining";
+    Activities["Volleyball"] = "Volleyball";
+    Activities["Walking"] = "Walking";
+    Activities["WaterFitness"] = "WaterFitness";
+    Activities["WaterPolo"] = "WaterPolo";
+    Activities["WaterSports"] = "WaterSports";
+    Activities["Wrestling"] = "Wrestling";
+    Activities["Yoga"] = "Yoga";
+    Activities["Barre"] = "Barre";
+    Activities["CoreTraining"] = "CoreTraining";
+    Activities["CrossCountrySkiing"] = "CrossCountrySkiing";
+    Activities["DownhillSkiing"] = "DownhillSkiing";
+    Activities["Flexibility"] = "Flexibility";
+    Activities["HighIntensityIntervalTraining"] = "HighIntensityIntervalTraining";
+    Activities["JumpRope"] = "JumpRope";
+    Activities["Kickboxing"] = "Kickboxing";
+    Activities["Pilates"] = "Pilates";
+    Activities["Snowboarding"] = "Snowboarding";
+    Activities["Stairs"] = "Stairs";
+    Activities["StepTraining"] = "StepTraining";
+    Activities["WheelchairWalkPace"] = "WheelchairWalkPace";
+    Activities["WheelchairRunPace"] = "WheelchairRunPace";
+    Activities["TaiChi"] = "TaiChi";
+    Activities["MixedCardio"] = "MixedCardio";
+    Activities["HandCycling"] = "HandCycling";
+})(Activities || (Activities = {}));
+exports.default = Activities;
 //# sourceMappingURL=Activities.js.map
