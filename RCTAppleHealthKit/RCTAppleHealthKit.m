@@ -188,7 +188,7 @@ RCT_EXPORT_METHOD(getWalkingHeartRateAverage:(NSDictionary *)input callback:(RCT
 
 RCT_EXPORT_METHOD(getActiveEnergyBurned:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
-   [self activity_getActiveEnergyBurned:input callback:callback];
+    [self activity_getActiveEnergyBurned:input callback:callback];
 }
 
 RCT_EXPORT_METHOD(getBasalEnergyBurned:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
@@ -262,6 +262,24 @@ RCT_EXPORT_METHOD(getAuthStatus: (NSDictionary *)input callback:(RCTResponseSend
 }
 
 
+RCT_EXPORT_METHOD(authorizationStatus: (NSArray *)types callback:(RCTResponseSenderBlock)callback)
+{
+    NSDictionary *readPermDict = [self readPermsDict];
+    NSMutableArray *readPermSet = [[NSMutableArray alloc] init];
+
+    for(int i=0; i<[types count]; i++) {
+        NSString *type = types[i];
+        HKObjectType *perm = [readPermDict objectForKey:type];
+        if(perm != nil) {
+            [readPermSet addObject: [NSNumber numberWithInt:-1]];
+        } else {
+            HKAuthorizationStatus status = [self.healthStore authorizationStatusForType: perm];
+            [readPermSet addObject: [NSNumber numberWithInt:status]];
+        }
+    }
+
+    callback(@[[NSNull null], readPermSet]);
+}
 
 - (void)isHealthKitAvailable:(RCTResponseSenderBlock)callback
 {
@@ -326,10 +344,10 @@ RCT_EXPORT_METHOD(getAuthStatus: (NSDictionary *)input callback:(RCTResponseSend
 - (void)getModuleInfo:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
     NSDictionary *info = @{
-            @"name" : @"react-native-apple-healthkit",
-            @"description" : @"A React Native bridge module for interacting with Apple HealthKit data",
-            @"className" : @"RCTAppleHealthKit",
-            @"author": @"Greg Wilson",
+        @"name" : @"react-native-apple-healthkit",
+        @"description" : @"A React Native bridge module for interacting with Apple HealthKit data",
+        @"className" : @"RCTAppleHealthKit",
+        @"author": @"Greg Wilson",
     };
     callback(@[[NSNull null], info]);
 }
@@ -366,8 +384,8 @@ RCT_EXPORT_METHOD(getAuthStatus: (NSDictionary *)input callback:(RCTResponseSend
                            @{
                                @"read": read,
                                @"write": write
-                               }
-                       }]);
+                           }
+        }]);
     } else {
         callback(@[RCTMakeError(@"HealthKit data is not available", nil, nil)]);
     }

@@ -2,26 +2,27 @@ import { Permissions, Units, Activities } from "./Constants";
 import { NativeModules } from "react-native";
 
 type PermissionOptions = {
-    read: (keyof typeof Permissions)[];
-    write: (keyof typeof Permissions)[];
+    read: Permissions[];
+    write: Permissions[];
 };
 
 type WorkoutOptions = {
-    type: keyof typeof Activities;
+    type: Activities;
     startDate: Date;
     endDate: Date;
     duration?: number;
     energyBurned?: {
-        unit: keyof typeof Units;
+        unit: Units;
         value: number;
     };
     distance?: {
-        unit: keyof typeof Units;
+        unit: Units;
         value: number;
     };
 };
 
 enum AuthorizationStatus {
+    UnavailablePermission = -1,
     NotDetermined,
     SharingDenied,
     SharingAuthorized,
@@ -74,6 +75,10 @@ const HealthKit = {
                 handleCallbackWithPromise(resolve, reject)
             );
         });
+    },
+    /** Only Available Write Permissions **/
+    authorizationStatus: (types: Permissions[]): AuthorizationStatus[] => {
+        return AppleHealthKit.authorizationStatus(types);
     },
     getAuthStatus: (
         options: PermissionOptions
