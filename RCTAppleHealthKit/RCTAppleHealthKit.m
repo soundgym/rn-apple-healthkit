@@ -270,7 +270,7 @@ RCT_EXPORT_METHOD(authorizationStatus: (NSArray *)types callback:(RCTResponseSen
     for(int i=0; i<[types count]; i++) {
         NSString *type = types[i];
         HKObjectType *perm = [readPermDict objectForKey:type];
-        if(perm != nil) {
+        if(perm == nil) {
             [readPermSet addObject: [NSNumber numberWithInt:-1]];
         } else {
             HKAuthorizationStatus status = [self.healthStore authorizationStatusForType: perm];
