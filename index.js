@@ -45,7 +45,9 @@ const HealthKit = {
         });
     },
     authorizationStatus: (types) => {
-        return AppleHealthKit.authorizationStatus(types);
+        return new Promise((resolve, reject) => {
+            AppleHealthKit.authorizationStatus(types, handleCallbackWithPromise(resolve, reject));
+        });
     },
     getAuthStatus: (options) => {
         return new Promise((resolve, reject) => {

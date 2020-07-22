@@ -77,8 +77,10 @@ const HealthKit = {
         });
     },
     /** Only Available Write Permissions **/
-    authorizationStatus: (types: Permissions[]): AuthorizationStatus[] => {
-        return AppleHealthKit.authorizationStatus(types);
+    authorizationStatus: (types: Permissions[]): Promise<AuthorizationStatus[]> => {
+        return new Promise((resolve, reject) => {
+            AppleHealthKit.authorizationStatus(types, handleCallbackWithPromise(resolve, reject));
+        });
     },
     getAuthStatus: (
         options: PermissionOptions

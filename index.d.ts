@@ -27,7 +27,7 @@ declare const HealthKit: {
     isAvailable: () => Promise<boolean>;
     init: (options: PermissionOptions) => Promise<true>;
     saveWorkout: (options: WorkoutOptions) => Promise<string>;
-    authorizationStatus: (types: Permissions[]) => AuthorizationStatus[];
+    authorizationStatus: (types: Permissions[]) => Promise<AuthorizationStatus[]>;
     getAuthStatus: (options: PermissionOptions) => Promise<{
         read: AuthorizationStatus[];
         write: AuthorizationStatus[];
