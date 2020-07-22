@@ -32,11 +32,10 @@ const HealthKit = {
     },
     saveMindfulSession: (options) => {
         return new Promise((resolve, reject) => {
-            const { startDate, endDate, value } = options;
+            const { startDate, endDate } = options;
             AppleHealthKit.saveMindfulSession({
                 startDate: startDate.toISOString(),
                 endDate: endDate.toISOString(),
-                value,
             }, handleCallbackWithPromise(resolve, reject));
         });
     },

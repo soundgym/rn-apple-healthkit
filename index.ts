@@ -24,7 +24,6 @@ type WorkoutOptions = {
 type MindfulSessionOptions = {
     startDate: Date;
     endDate: Date;
-    value: number;
 };
 
 enum AuthorizationStatus {
@@ -60,12 +59,11 @@ const HealthKit = {
     },
     saveMindfulSession: (options: MindfulSessionOptions): Promise<string> => {
         return new Promise((resolve, reject) => {
-            const { startDate, endDate, value } = options;
+            const { startDate, endDate } = options;
             AppleHealthKit.saveMindfulSession(
                 {
                     startDate: startDate.toISOString(),
                     endDate: endDate.toISOString(),
-                    value,
                 },
                 handleCallbackWithPromise(resolve, reject)
             );

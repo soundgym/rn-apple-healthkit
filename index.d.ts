@@ -20,7 +20,6 @@ declare type WorkoutOptions = {
 declare type MindfulSessionOptions = {
     startDate: Date;
     endDate: Date;
-    value: number;
 };
 declare enum AuthorizationStatus {
     UnavailablePermission = -1,
