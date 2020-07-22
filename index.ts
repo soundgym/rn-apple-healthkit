@@ -21,6 +21,12 @@ type WorkoutOptions = {
     };
 };
 
+type MindfulSessionOptions = {
+    startDate: Date;
+    endDate: Date;
+    value: number;
+};
+
 enum AuthorizationStatus {
     UnavailablePermission = -1,
     NotDetermined,
@@ -50,6 +56,19 @@ const HealthKit = {
     init: (options: PermissionOptions): Promise<true> => {
         return new Promise((resolve, reject) => {
             AppleHealthKit.initHealthKit({ permissions: options }, handleCallbackWithPromise(resolve, reject));
+        });
+    },
+    saveMindfulSession: (options: MindfulSessionOptions): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const { startDate, endDate, value } = options;
+            AppleHealthKit.saveMindfulSession(
+                {
+                    startDate: startDate.toISOString(),
+                    endDate: endDate.toISOString(),
+                    value,
+                },
+                handleCallbackWithPromise(resolve, reject)
+            );
         });
     },
     saveWorkout: (options: WorkoutOptions): Promise<string> => {

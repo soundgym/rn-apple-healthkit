@@ -30,6 +30,16 @@ const HealthKit = {
             AppleHealthKit.initHealthKit({ permissions: options }, handleCallbackWithPromise(resolve, reject));
         });
     },
+    saveMindfulSession: (options) => {
+        return new Promise((resolve, reject) => {
+            const { startDate, endDate, value } = options;
+            AppleHealthKit.saveMindfulSession({
+                startDate: startDate.toISOString(),
+                endDate: endDate.toISOString(),
+                value,
+            }, handleCallbackWithPromise(resolve, reject));
+        });
+    },
     saveWorkout: (options) => {
         return new Promise((resolve, reject) => {
             const { startDate, endDate, energyBurned = { unit: Constants_1.Units.calorie, value: -1 }, distance = { unit: Constants_1.Units.mile, value: -1 }, ...rest } = options;

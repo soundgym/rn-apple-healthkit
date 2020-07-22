@@ -17,6 +17,11 @@ declare type WorkoutOptions = {
         value: number;
     };
 };
+declare type MindfulSessionOptions = {
+    startDate: Date;
+    endDate: Date;
+    value: number;
+};
 declare enum AuthorizationStatus {
     UnavailablePermission = -1,
     NotDetermined = 0,
@@ -26,6 +31,7 @@ declare enum AuthorizationStatus {
 declare const HealthKit: {
     isAvailable: () => Promise<boolean>;
     init: (options: PermissionOptions) => Promise<true>;
+    saveMindfulSession: (options: MindfulSessionOptions) => Promise<string>;
     saveWorkout: (options: WorkoutOptions) => Promise<string>;
     authorizationStatus: (types: Permissions[]) => Promise<AuthorizationStatus[]>;
     getAuthStatus: (options: PermissionOptions) => Promise<{
