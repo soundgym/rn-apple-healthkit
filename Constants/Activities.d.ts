@@ -70,6 +70,7 @@ declare enum Activities {
     WheelchairRunPace = "WheelchairRunPace",
     TaiChi = "TaiChi",
     MixedCardio = "MixedCardio",
-    HandCycling = "HandCycling"
+    HandCycling = "HandCycling",
+    Other = "Other"
 }
 export default Activities;

@@ -76,6 +76,7 @@ enum Activities {
     TaiChi = "TaiChi",
     MixedCardio = "MixedCardio",
     HandCycling = "HandCycling",
+    Other = "Other",
 }
 
 export default Activities;

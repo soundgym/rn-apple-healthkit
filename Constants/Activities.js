@@ -74,6 +74,7 @@ var Activities;
     Activities["TaiChi"] = "TaiChi";
     Activities["MixedCardio"] = "MixedCardio";
     Activities["HandCycling"] = "HandCycling";
+    Activities["Other"] = "Other";
 })(Activities || (Activities = {}));
 exports.default = Activities;
 //# sourceMappingURL=Activities.js.map
