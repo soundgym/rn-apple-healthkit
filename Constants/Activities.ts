@@ -1,6 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
+/**
+ * Apple Health Permissions
+ * https://github.com/terrillo/rn-apple-healthkit
+ * @type {Object}
+ */
+
+export default {
     AmericanFootball: 'AmericanFootball',
     Archery: 'Archery',
     AustralianFootball: 'AustralianFootball',
@@ -73,5 +77,4 @@ exports.default = {
     TaiChi: 'TaiChi',
     MixedCardio: 'MixedCardio',
     HandCycling: 'HandCycling',
-};
-//# sourceMappingURL=Activities.js.map
+}

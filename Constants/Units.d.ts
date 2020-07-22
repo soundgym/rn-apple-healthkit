@@ -1,0 +1,23 @@
+declare const _default: {
+    bpm: string;
+    calorie: string;
+    celsius: string;
+    count: string;
+    day: string;
+    fahrenheit: string;
+    foot: string;
+    gram: string;
+    hour: string;
+    inch: string;
+    joule: string;
+    meter: string;
+    mgPerdL: string;
+    mile: string;
+    minute: string;
+    mmhg: string;
+    mmolPerL: string;
+    percent: string;
+    pound: string;
+    second: string;
+};
+export default _default;
