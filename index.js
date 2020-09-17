@@ -35,7 +35,7 @@ const HealthKit = {
             const { startDate, endDate } = options;
             AppleHealthKit.saveMindfulSession({
                 startDate: startDate.toISOString(),
-                endDate: endDate.toISOString(),
+                endDate: endDate.toISOString()
             }, handleCallbackWithPromise(resolve, reject));
         });
     },
@@ -49,7 +49,7 @@ const HealthKit = {
                 energyBurnedUnit: energyBurned.unit,
                 distance: distance.value,
                 distanceUnit: distance.unit,
-                ...rest,
+                ...rest
             }, handleCallbackWithPromise(resolve, reject));
         });
     },
@@ -70,11 +70,26 @@ const HealthKit = {
             });
         });
     },
+    getHeartRate: (options) => {
+        const { startDate, endDate = new Date(), ...rest } = options;
+        return new Promise((resolve, reject) => {
+            AppleHealthKit.getHeartRateSamples({
+                startDate: startDate.toISOString(),
+                endDate: endDate.toISOString(),
+                ...rest
+            }, (err, results) => {
+                if (err) {
+                    reject(err);
+                }
+                resolve(results);
+            });
+        });
+    }
 };
 exports.HKConstants = {
     Permissions: Constants_1.Permissions,
     Units: Constants_1.Units,
-    Activities: Constants_1.Activities,
+    Activities: Constants_1.Activities
 };
 exports.default = HealthKit;
 //# sourceMappingURL=index.js.map

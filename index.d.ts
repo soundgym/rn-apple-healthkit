@@ -21,6 +21,15 @@ declare type MindfulSessionOptions = {
     startDate: Date;
     endDate: Date;
 };
+interface GetSampleOptions {
+    startDate: Date;
+    endDate?: Date;
+}
+declare type GetHeartRateOptions = GetSampleOptions & {
+    unit?: string;
+    ascending?: boolean;
+    limit?: number;
+};
 declare enum AuthorizationStatus {
     UnavailablePermission = -1,
     NotDetermined = 0,
@@ -37,6 +46,11 @@ declare const HealthKit: {
         read: AuthorizationStatus[];
         write: AuthorizationStatus[];
     }>;
+    getHeartRate: (options: GetHeartRateOptions) => Promise<{
+        value: number;
+        startDate: string;
+        endDate: string;
+    }[]>;
 };
 export declare const HKConstants: {
     Permissions: typeof Permissions;

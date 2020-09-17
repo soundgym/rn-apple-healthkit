@@ -26,11 +26,22 @@ type MindfulSessionOptions = {
     endDate: Date;
 };
 
+interface GetSampleOptions {
+    startDate: Date;
+    endDate?: Date; // default now
+}
+
+type GetHeartRateOptions = GetSampleOptions & {
+    unit?: string; // default bpm
+    ascending?: boolean; // default false
+    limit?: number; // default unlimited
+};
+
 enum AuthorizationStatus {
     UnavailablePermission = -1,
     NotDetermined,
     SharingDenied,
-    SharingAuthorized,
+    SharingAuthorized
 }
 
 const { AppleHealthKit } = NativeModules;
@@ -63,7 +74,7 @@ const HealthKit = {
             AppleHealthKit.saveMindfulSession(
                 {
                     startDate: startDate.toISOString(),
-                    endDate: endDate.toISOString(),
+                    endDate: endDate.toISOString()
                 },
                 handleCallbackWithPromise(resolve, reject)
             );
@@ -87,7 +98,7 @@ const HealthKit = {
                     energyBurnedUnit: energyBurned.unit,
                     distance: distance.value,
                     distanceUnit: distance.unit,
-                    ...rest,
+                    ...rest
                 },
                 handleCallbackWithPromise(resolve, reject)
             );
@@ -112,12 +123,30 @@ const HealthKit = {
             });
         });
     },
+    getHeartRate: (options: GetHeartRateOptions): Promise<{ value: number; startDate: string; endDate: string }[]> => {
+        const { startDate, endDate = new Date(), ...rest } = options;
+        return new Promise((resolve, reject) => {
+            AppleHealthKit.getHeartRateSamples(
+                {
+                    startDate: startDate.toISOString(),
+                    endDate: endDate.toISOString(),
+                    ...rest
+                },
+                (err: any, results: any) => {
+                    if (err) {
+                        reject(err);
+                    }
+                    resolve(results);
+                }
+            );
+        });
+    }
 };
 
 export const HKConstants = {
     Permissions,
     Units,
-    Activities,
+    Activities
 };
 
 export default HealthKit;
