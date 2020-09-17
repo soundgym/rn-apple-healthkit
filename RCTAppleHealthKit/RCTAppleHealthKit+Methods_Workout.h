@@ -12,5 +12,6 @@
 
 -(void)workout_get:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 -(void)workout_save: (NSDictionary *)input callback: (RCTResponseSenderBlock)callback;
+-(void)log_activity: (HKWorkout *)workout kcal: (NSNumber *_Nullable)kcal;
 
 @end
