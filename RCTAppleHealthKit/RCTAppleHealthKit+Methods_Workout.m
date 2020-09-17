@@ -78,7 +78,7 @@
 }
 
 -(void)log_activity:(HKWorkout *)workout kcal: (NSNumber *_Nullable)kcal {
-    NSMutableArray *samples = [[NSMutableArray alloc] init];
+    NSMutableArray<HKSample *> *samples = [[NSMutableArray<HKSample *> alloc] init];
     
     NSNumber *num = kcal;
     if(num != nil && num != 0){
@@ -93,17 +93,21 @@
         [samples addObject:kcalSample];
     }
     
-    if (@available(iOS 9.3, *)) {
-        HKQuantityType *exerciseType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierAppleExerciseTime];
-        HKQuantity *exerciseQuant = [HKQuantity quantityWithUnit:[HKUnit secondUnit] doubleValue:[workout duration]];
-        HKQuantitySample *exerciseSample = [HKQuantitySample quantitySampleWithType:exerciseType
-                                                                           quantity:exerciseQuant
-                                                                          startDate:[workout startDate]
-                                                                            endDate:[workout endDate]];
-        [samples addObject:exerciseSample];
-    }
+//    Cannot get write permission on Apple Quantity types..
+//    if (@available(iOS 9.3, *)) {
+//        HKQuantityType *exerciseType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierAppleExerciseTime];
+//        HKQuantity *exerciseQuant = [HKQuantity quantityWithUnit:[HKUnit secondUnit] doubleValue:[workout duration]];
+//        HKQuantitySample *exerciseSample = [HKQuantitySample quantitySampleWithType:exerciseType
+//                                                                           quantity:exerciseQuant
+//                                                                          startDate:[workout startDate]
+//                                                                            endDate:[workout endDate]];
+//        [samples addObject:exerciseSample];
+//    }
     
     [self.healthStore addSamples:samples toWorkout:workout completion:^(BOOL success, NSError * _Nullable error) {
+        if(error != nil){
+            NSLog(@"activity_kcal: error %@", error.localizedDescription);
+        }
         NSLog(@"activity_kcal: add sample to workout %s", success ? "SUCCESS" : "ERROR");
     }];
 }
