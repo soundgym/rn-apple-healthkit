@@ -84,7 +84,7 @@
     if(num != nil && num != 0){
         //Save Kcal
         HKQuantityType *kcalType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
-        HKQuantity *kcalQuant = [HKQuantity quantityWithUnit: [HKUnit kilocalorieUnit]
+        HKQuantity *kcalQuant = [HKQuantity quantityWithUnit: [HKUnit calorieUnit]
                                                  doubleValue: [num doubleValue]];
         HKQuantitySample *kcalSample = [HKQuantitySample quantitySampleWithType:kcalType
                                                                        quantity:kcalQuant
